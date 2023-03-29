@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      href="https://scontent.fktm10-1.fna.fbcdn.net/v/t1.6435-9/98033188_969754356787359_659998261347614720_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=Tzi-yJL2KSwAX_5BbhK&_nc_ht=scontent.fktm10-1.fna&oh=00_AfCo-HDyJ1pnmUSSKJy0ZhkZlg9RrbtokuN83pg-MYOpDA&oe=644A1DFA"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <style>
+      .attempt-navbar {
+        /* height: 100px; */
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        /* background-color: #fff; */
+      }
+      .attempt-navbar ul {
+        display: flex;
+        /* justify-content: space-around; */
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        gap: 60px;
+      }
+      .attempt-navbar ul li {
+        list-style: none;
+      }
+      .attempt-navbar ul li a {
+        text-decoration: none;
+        font-size: 1.25em;
+        font-weight: 500;
+        color: #ffffff8d;
+        cursor: pointer;
+        padding: 20px 0;
+      }
+      .attempt-navbar ul li a:hover {
+        color: #fff;
+      }
+      .attempt-navbar ul li:hover {
+        color: #fff;
+      }
+      .attempt-navbar .attempt-logo img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #fff;
+        transform: translateY(20px);
+      }
+    </style> -->
+  </head>
+  <style></style>
+  <body>
+    <!-- <nav class="attempt-navbar">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <h2 class="attempt-logo">
+          <a href="#">
+            <img
+              src="https://scontent.fktm10-1.fna.fbcdn.net/v/t1.6435-9/98033188_969754356787359_659998261347614720_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=Tzi-yJL2KSwAX_5BbhK&_nc_ht=scontent.fktm10-1.fna&oh=00_AfCo-HDyJ1pnmUSSKJy0ZhkZlg9RrbtokuN83pg-MYOpDA&oe=644A1DFA"
+              alt="logo"
+            />
+          </a>
+        </h2>
+        <li><a href="">Services</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav> -->
+
+    <header>
+      <nav class="navigation">
+        <ul>
+          <li class="list active">
+            <a href="#"
+              ><span class="icon"><i class="fa-solid fa-house"></i></span
+              ><span class="text">Home</span></a
+            >
+          </li>
+          <li class="list">
+            <a href="#"
+              ><span class="icon"><i class="fa-solid fa-user"></i></span
+              ><span class="text">About</span></a
+            >
+          </li>
+          <li class="list active-logo">
+            <a href="#">
+              <img
+                src="https://scontent.fktm10-1.fna.fbcdn.net/v/t1.6435-9/98033188_969754356787359_659998261347614720_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=174925&_nc_ohc=Tzi-yJL2KSwAX_5BbhK&_nc_ht=scontent.fktm10-1.fna&oh=00_AfCo-HDyJ1pnmUSSKJy0ZhkZlg9RrbtokuN83pg-MYOpDA&oe=644A1DFA"
+                alt="logo"
+              />
+            </a>
+          </li>
+          <li class="list">
+            <a href="#"
+              ><span class="icon"><i class="fa-solid fa-code"></i></span
+              ><span class="text">Work</span></a
+            >
+          </li>
+          <li class="list">
+            <a href="#"
+              ><span class="icon"><i class="fa-solid fa-phone"></i></span
+              ><span class="text">Call</span></a
+            >
+          </li>
+          <div class="indicator"></div>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img
+        src="images/1.png"
+        class="translateX"
+        data-speed="0.25"
+        id="moon"
+        alt=""
+      />
+      <img
+        src="images/2.png"
+        class="translateY"
+        data-speed="0.35"
+        id="clouds"
+        alt=""
+      />
+      <img
+        src="images/3.png"
+        class="translateY"
+        data-speed="0.15"
+        id="mount"
+        alt=""
+      />
+      <h2 id="text" class="translateX" data-speed="-3">
+        Discover New Horizons
+      </h2>
+      <a href="#" id="btn">Explore</a>
+      <img
+        src="images/4.png"
+        class="translateY"
+        data-speed="0"
+        id="base"
+        alt=""
+      />
+    </section>
+    <script>
+      // For navbar
+      const list = document.querySelectorAll(".list");
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activeLink));
+
+      // const translateX = document.querySelectorAll(".translateX");
+      // const translateY = document.querySelectorAll(".translateY");
+      // window.addEventListener("scroll", () => {
+      //   let scroll = window.pageYOffset;
+      //   translateX.forEach((element) => {
+      //     let speed = element.dataset.speed;
+      //     element.style.transform = `translateX(${scroll * speed}px)`;
+      //   });
+      //   translateY.forEach((element) => {
+      //     let speed = element.dataset.speed;
+      //     element.style.transform = `translateY(${scroll * speed}px)`;
+      //   });
+      // });
+
+      const moon = document.getElementById("moon");
+      const clouds = document.getElementById("clouds");
+      const mount = document.getElementById("mount");
+      const base = document.getElementById("base");
+      const text = document.getElementById("text");
+      const btn = document.getElementById("btn");
+
+      window.addEventListener("scroll", () => {
+        let value = window.scrollY;
+        moon.style.bottom = 50 + value * 1 + "%";
+        clouds.style.top = value * 0.5 + "%";
+        mount.style.top = value * 0.15 + "%";
+        base.style.top = value * 0.05 + "%";
+        // text.style.left = 50 + value * -0.5 + "%";
+        text.style.top = 50 + value * -0.25 + "%";
+        btn.style.bottom = 50 + value * -0.5 + "%";
+        // btn.style.top = 50 + value * -0.75 + "%";
+      });
+    </script>
+  </body>
+</html>
