@@ -305,6 +305,10 @@ header {
   color: var(--clr);
 } */
 
+#birds{
+  transform: scale(0.3);
+}
+
 @media screen and (max-width: 480px) {
   .navigation {
     transform: scale(0.8);
